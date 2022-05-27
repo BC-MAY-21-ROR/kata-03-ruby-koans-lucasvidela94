@@ -5,19 +5,20 @@ require File.expand_path("#{File.dirname(__FILE__)}/neo")
 C = 'top level'
 
 class AboutConstants < Neo::Koan
-  C = 'nested'
+
+  C = "nested"
 
   def test_nested_constants_may_also_be_referenced_with_relative_paths
-    assert_equal 'nested', C
+    assert_equal "nested", C
   end
 
   def test_top_level_constants_are_referenced_by_double_colons
-    assert_equal 'top level', ::C
+    assert_equal "top level", ::C
   end
 
   def test_nested_constants_are_referenced_by_their_complete_path
-    assert_equal 'nested', AboutConstants::C
-    assert_equal 'nested', ::AboutConstants::C
+    assert_equal "nested", AboutConstants::C
+    assert_equal "nested", ::AboutConstants::C
   end
 
   # ------------------------------------------------------------------
@@ -68,22 +69,20 @@ class AboutConstants < Neo::Koan
   end
 
   # QUESTION: Which has precedence: The constant in the lexical scope,
-  # or the constant from the inheritance hierarchy?
+  # or the constant from the inheritance hierarchy? LEXICAL SCOPE
 
   # ------------------------------------------------------------------
 
-  module MyAnimals
-    class Oyster < Animal
-      def legs_in_oyster
-        LEGS
-      end
+  class MyAnimals::Oyster < Animal
+    def legs_in_oyster
+      LEGS
     end
   end
 
   def test_who_wins_with_explicit_scoping_on_class_definition
     assert_equal 4, MyAnimals::Oyster.new.legs_in_oyster
   end
-
+  #ANSWER: Oyster is in MyAnimals namespace but not declared in the scope
   # QUESTION: Now which has precedence: The constant in the lexical
   # scope, or the constant from the inheritance hierarchy?  Why is it
   # different than the previous answer?
