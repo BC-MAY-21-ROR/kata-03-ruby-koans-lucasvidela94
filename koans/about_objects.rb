@@ -1,4 +1,3 @@
-# frozen_string_literal: true
 
 require File.expand_path("#{File.dirname(__FILE__)}/neo")
 
@@ -12,13 +11,13 @@ class AboutObjects < Neo::Koan
   end
 
   def test_objects_can_be_converted_to_strings
-    assert_equal "123", 123.to_s
-    assert_equal "", nil.to_s
+    assert_equal '123', 123.to_s
+    assert_equal '', nil.to_s
   end
 
   def test_objects_can_be_inspected
-    assert_equal "123", 123.inspect
-    assert_equal "nil", nil.inspect
+    assert_equal '123', 123.inspect
+    assert_equal 'nil', nil.inspect
   end
 
   def test_every_object_has_an_id
@@ -35,7 +34,7 @@ class AboutObjects < Neo::Koan
   def test_small_integers_have_fixed_ids
     assert_equal 1, 0.object_id
     assert_equal 3, 1.object_id
-    assert_equal 5 , 2.object_id
+    assert_equal 5, 2.object_id
     assert_equal 201, 100.object_id
 
     # THINK ABOUT IT:

@@ -1,0 +1,888 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sandi Chart</title>
+  <link rel="stylesheet" href="assets/normalize.css">
+  <link rel="stylesheet" href="assets/morris.css">
+  <link rel="stylesheet" href="assets/style.css">
+  <script src="assets/jquery.js"></script>
+  <script src="assets/chart.js"></script>
+  <script src="assets/script.js"></script>
+  <script type="text/javascript">
+    var data = [{"r10":71,"r11":16,"r20":304,"r21":114,"r30":918,"r31":2,"r40":0,"r41":0,"timestamp":1653678277000}];
+  </script>
+</head>
+<body>
+  <a href="https://github.com/makaroni4/sandi_meter"><img style="position: absolute; top: 0; left: 0; border: 0;" src="assets/forkme.png" alt="Fork me on GitHub"></a>
+  <div class="container">
+    <header>
+      <h1 class="main-title">Sandi Metz rules</h1>
+      <h2 class="main-description js-report-date"></h2>
+    </header>
+    <section class="pie-charts">
+      <div id="pie1" class="pie-charts-item"></div>
+      <div id="pie2" class="pie-charts-item"></div>
+      <div id="pie3" class="pie-charts-item"></div>
+      <div id="pie4" class="pie-charts-item"></div>
+      <div class="clearfix"></div>
+    </section>
+    <nav class="main-menu">
+      <a href="#" class="main-menu-active js-menu-item" data-rel=".js-charts">Rules</a>
+      <a href="#" class="js-menu-item" data-rel=".js-charts-percentage">Rules %</a>
+      <a href="#" class="js-menu-item" data-rel=".js-progress">Progress %</a>
+      <a href="#" class="js-menu-item" data-rel=".js-details">Details</a>
+    </nav>
+    <section class="plot-charts js-charts js-tab-item">
+      <div class="plot-charts-item">
+        <div class="plot-charts-item-caption">Number of 100 line classes vs time</div>
+        <div class="plot-charts-item-graph plot1"></div>
+      </div>
+      <div class="plot-charts-item">
+        <div class="plot-charts-item-caption">Number of 5 line methods vs time</div>
+        <div class="plot-charts-item-graph plot2"></div>
+      </div>
+      <div class="clearfix"></div>
+      <div class="plot-charts-item">
+        <div class="plot-charts-item-caption">Number of methods calls with 4 params vs time</div>
+        <div class="plot-charts-item-graph plot3"></div>
+      </div>
+      <div class="plot-charts-item">
+        <div class="plot-charts-item-caption">Number of controllers with 1 instance variable vs time</div>
+        <div class="plot-charts-item-graph plot4"></div>
+      </div>
+      <div class="clearfix"></div>
+    </section>
+    <section class="details js-details js-tab-item">
+      <h2>Classes with 100+ lines</h2>
+<table class="details-stats">
+  <thead>
+    <tr>
+<th class="" title="">Class name</th>
+<th class="" title="">Size</th>
+<th class="" title="">Path</th>
+</tr>
+
+  </thead>
+  <tbody>
+    <tr>
+<td class="" title="">AboutClassMethods</td>
+<td class="" title="">164</td>
+<td class="" title="">./koans/about_class_methods.rb</td>
+</tr>
+<tr>
+<td class="" title="">AboutClasses</td>
+<td class="" title="">183</td>
+<td class="" title="">./koans/about_classes.rb</td>
+</tr>
+<tr>
+<td class="" title="">AboutControlStatements</td>
+<td class="" title="">131</td>
+<td class="" title="">./koans/about_control_statements.rb</td>
+</tr>
+<tr>
+<td class="" title="">AboutHashes</td>
+<td class="" title="">112</td>
+<td class="" title="">./koans/about_hashes.rb</td>
+</tr>
+<tr>
+<td class="" title="">AboutIteration</td>
+<td class="" title="">117</td>
+<td class="" title="">./koans/about_iteration.rb</td>
+</tr>
+<tr>
+<td class="" title="">AboutJavaInterop</td>
+<td class="" title="">125</td>
+<td class="" title="">./koans/about_java_interop.rb</td>
+</tr>
+<tr>
+<td class="" title="">AboutMessagePassing</td>
+<td class="" title="">179</td>
+<td class="" title="">./koans/about_message_passing.rb</td>
+</tr>
+<tr>
+<td class="" title="">AboutMethods</td>
+<td class="" title="">144</td>
+<td class="" title="">./koans/about_methods.rb</td>
+</tr>
+<tr>
+<td class="" title="">AboutRegularExpressions</td>
+<td class="" title="">156</td>
+<td class="" title="">./koans/about_regular_expressions.rb</td>
+</tr>
+<tr>
+<td class="" title="">Neo::Sensei</td>
+<td class="" title="">211</td>
+<td class="" title="">./koans/neo.rb</td>
+</tr>
+<tr>
+<td class="warning" title="Misindented classes">AboutConstants::MyAnimals::Oyster</td>
+<td class="warning" title="Misindented classes"></td>
+<td class="warning" title="Misindented classes">./koans/about_constants.rb</td>
+</tr>
+<tr>
+<td class="warning" title="Misindented classes">Proxy</td>
+<td class="warning" title="Misindented classes"></td>
+<td class="warning" title="Misindented classes">./koans/about_proxy_object_project.rb</td>
+</tr>
+<tr>
+<td class="warning" title="Misindented classes">AboutProxyObjectProject</td>
+<td class="warning" title="Misindented classes"></td>
+<td class="warning" title="Misindented classes">./koans/about_proxy_object_project.rb</td>
+</tr>
+<tr>
+<td class="warning" title="Misindented classes">Television</td>
+<td class="warning" title="Misindented classes"></td>
+<td class="warning" title="Misindented classes">./koans/about_proxy_object_project.rb</td>
+</tr>
+<tr>
+<td class="warning" title="Misindented classes">TelevisionTest</td>
+<td class="warning" title="Misindented classes"></td>
+<td class="warning" title="Misindented classes">./koans/about_proxy_object_project.rb</td>
+</tr>
+<tr>
+<td class="warning" title="Misindented classes">AboutStrings</td>
+<td class="warning" title="Misindented classes"></td>
+<td class="warning" title="Misindented classes">./koans/about_strings.rb</td>
+</tr>
+
+  </tbody>
+</table>
+<div class="hint">NOTE: Red classes are misindented. Start improving your project by fixing them.</div><h2>Methods with 5+ lines</h2>
+<table class="details-stats">
+  <thead>
+    <tr>
+<th class="" title="">Class name</th>
+<th class="" title="">Method name</th>
+<th class="" title="">Size</th>
+<th class="" title="">Path</th>
+</tr>
+
+  </thead>
+  <tbody>
+    <tr>
+<td class="" title="">Neo::Sensei</td>
+<td class="" title="">artistic_end_screen</td>
+<td class="" title="">41</td>
+<td class="" title="">./koans/neo.rb</td>
+</tr>
+<tr>
+<td class="" title="">AboutMessagePassing</td>
+<td class="" title="">test_calling_method_missing_causes_the_no_method_error</td>
+<td class="" title="">23</td>
+<td class="" title="">./koans/about_message_passing.rb</td>
+</tr>
+<tr>
+<td class="" title="">Neo::Sensei</td>
+<td class="" title="">a_zenlike_statement</td>
+<td class="" title="">19</td>
+<td class="" title="">./koans/neo.rb</td>
+</tr>
+<tr>
+<td class="" title="">Neo::Koan</td>
+<td class="" title="">setup</td>
+<td class="" title="">17</td>
+<td class="" title="">./koans/neo.rb</td>
+</tr>
+<tr>
+<td class="" title="">AboutJavaInterop</td>
+<td class="" title="">test_java_strings_can_be_compared_to_ruby_strings_maybe</td>
+<td class="" title="">17</td>
+<td class="" title="">./koans/about_java_interop.rb</td>
+</tr>
+<tr>
+<td class="" title="">AboutControlStatements</td>
+<td class="" title="">test_if_statements_return_values</td>
+<td class="" title="">16</td>
+<td class="" title="">./koans/about_control_statements.rb</td>
+</tr>
+<tr>
+<td class="" title="">AboutDiceProject</td>
+<td class="" title="">test_dice_values_should_change_between_rolls</td>
+<td class="" title="">16</td>
+<td class="" title="">./koans/about_dice_project.rb</td>
+</tr>
+<tr>
+<td class="" title="">AboutExceptions</td>
+<td class="" title="">test_rescue_clause</td>
+<td class="" title="">16</td>
+<td class="" title="">./koans/about_exceptions.rb</td>
+</tr>
+<tr>
+<td class="" title="">Neo::Koan</td>
+<td class="" title="">teardown</td>
+<td class="" title="">15</td>
+<td class="" title="">./koans/neo.rb</td>
+</tr>
+<tr>
+<td class="" title="">Neo::Koan</td>
+<td class="" title="">command_line</td>
+<td class="" title="">14</td>
+<td class="" title="">./koans/neo.rb</td>
+</tr>
+<tr>
+<td class="" title="">Neo::Sensei</td>
+<td class="" title="">show_progress</td>
+<td class="" title="">14</td>
+<td class="" title="">./koans/neo.rb</td>
+</tr>
+<tr>
+<td class="" title="">Neo::Koan</td>
+<td class="" title="">meditate</td>
+<td class="" title="">13</td>
+<td class="" title="">./koans/neo.rb</td>
+</tr>
+<tr>
+<td class="" title="">AboutNil</td>
+<td class="" title="">test_you_dont_get_null_pointer_errors_when_calling_methods_on_nil</td>
+<td class="" title="">12</td>
+<td class="" title="">./koans/about_nil.rb</td>
+</tr>
+<tr>
+<td class="" title="">AboutIteration</td>
+<td class="" title="">test_all_iteration_methods_work_on_any_collection_not_just_arrays</td>
+<td class="" title="">12</td>
+<td class="" title="">./koans/about_iteration.rb</td>
+</tr>
+<tr>
+<td class="" title="">Neo::Sensei</td>
+<td class="" title="">observe</td>
+<td class="" title="">12</td>
+<td class="" title="">./koans/neo.rb</td>
+</tr>
+<tr>
+<td class="" title="">AboutNil</td>
+<td class="" title="">test_nil_has_a_few_methods_defined_on_it</td>
+<td class="" title="">11</td>
+<td class="" title="">./koans/about_nil.rb</td>
+</tr>
+<tr>
+<td class="" title="">Neo::Color</td>
+<td class="" title="">use_colors?</td>
+<td class="" title="">11</td>
+<td class="" title="">./koans/neo.rb</td>
+</tr>
+<tr>
+<td class="" title="">AboutClasses</td>
+<td class="" title="">test_instance_variables_cannot_be_accessed_outside_the_class</td>
+<td class="" title="">11</td>
+<td class="" title="">./koans/about_classes.rb</td>
+</tr>
+<tr>
+<td class="" title="">AboutArrays</td>
+<td class="" title="">test_array_literals</td>
+<td class="" title="">11</td>
+<td class="" title="">./koans/about_arrays.rb</td>
+</tr>
+<tr>
+<td class="" title="">AboutHashes</td>
+<td class="" title="">test_default_value</td>
+<td class="" title="">11</td>
+<td class="" title="">./koans/about_hashes.rb</td>
+</tr>
+<tr>
+<td class="" title="">AboutExceptions</td>
+<td class="" title="">test_ensure_clause</td>
+<td class="" title="">10</td>
+<td class="" title="">./koans/about_exceptions.rb</td>
+</tr>
+<tr>
+<td class="" title="">Neo::Sensei</td>
+<td class="" title="">progress</td>
+<td class="" title="">10</td>
+<td class="" title="">./koans/neo.rb</td>
+</tr>
+<tr>
+<td class="" title="">Neo::Sensei</td>
+<td class="" title="">encourage</td>
+<td class="" title="">10</td>
+<td class="" title="">./koans/neo.rb</td>
+</tr>
+<tr>
+<td class="" title="">AboutHashes</td>
+<td class="" title="">test_default_value_is_the_same_object</td>
+<td class="" title="">10</td>
+<td class="" title="">./koans/about_hashes.rb</td>
+</tr>
+<tr>
+<td class="" title="">AboutExceptions</td>
+<td class="" title="">test_raising_a_particular_error</td>
+<td class="" title="">10</td>
+<td class="" title="">./koans/about_exceptions.rb</td>
+</tr>
+<tr>
+<td class="" title="">AboutMethods</td>
+<td class="" title="">test_sometimes_missing_parentheses_are_ambiguous</td>
+<td class="" title="">10</td>
+<td class="" title="">./koans/about_methods.rb</td>
+</tr>
+<tr>
+<td class="" title="">Neo::Sensei</td>
+<td class="" title="">embolden_first_line_only</td>
+<td class="" title="">9</td>
+<td class="" title="">./koans/neo.rb</td>
+</tr>
+<tr>
+<td class="" title="">AboutArrays</td>
+<td class="" title="">test_slicing_arrays</td>
+<td class="" title="">9</td>
+<td class="" title="">./koans/about_arrays.rb</td>
+</tr>
+<tr>
+<td class="" title="">Neo::Sensei</td>
+<td class="" title="">instruct</td>
+<td class="" title="">9</td>
+<td class="" title="">./koans/neo.rb</td>
+</tr>
+<tr>
+<td class="" title="">AboutHashes</td>
+<td class="" title="">test_accessing_hashes_with_fetch</td>
+<td class="" title="">9</td>
+<td class="" title="">./koans/about_hashes.rb</td>
+</tr>
+<tr>
+<td class="" title="">AboutControlStatements</td>
+<td class="" title="">test_break_statement</td>
+<td class="" title="">9</td>
+<td class="" title="">./koans/about_control_statements.rb</td>
+</tr>
+<tr>
+<td class="" title="">Neo::ThePath</td>
+<td class="" title="">each_step</td>
+<td class="" title="">9</td>
+<td class="" title="">./koans/neo.rb</td>
+</tr>
+<tr>
+<td class="" title="">AboutControlStatements</td>
+<td class="" title="">test_next_statement</td>
+<td class="" title="">9</td>
+<td class="" title="">./koans/about_control_statements.rb</td>
+</tr>
+<tr>
+<td class="" title="">AboutMethods</td>
+<td class="" title="">test_calling_global_methods_with_wrong_number_of_argumentseb</td>
+<td class="" title="">9</td>
+<td class="" title="">./koans/about_methods.rb</td>
+</tr>
+<tr>
+<td class="" title="">AboutClassMethods</td>
+<td class="" title="">test_other_objects_are_not_affected_by_these_singleton_methods</td>
+<td class="" title="">9</td>
+<td class="" title="">./koans/about_class_methods.rb</td>
+</tr>
+<tr>
+<td class="" title=""></td>
+<td class="" title="">triangle</td>
+<td class="" title="">9</td>
+<td class="" title="">./koans/triangle.rb</td>
+</tr>
+<tr>
+<td class="" title="">String</td>
+<td class="" title="">side_padding</td>
+<td class="" title="">8</td>
+<td class="" title="">./koans/neo.rb</td>
+</tr>
+<tr>
+<td class="" title="">AboutArrays</td>
+<td class="" title="">test_accessing_array_elements</td>
+<td class="" title="">8</td>
+<td class="" title="">./koans/about_arrays.rb</td>
+</tr>
+<tr>
+<td class="" title="">AboutHashes</td>
+<td class="" title="">test_changing_hashes</td>
+<td class="" title="">8</td>
+<td class="" title="">./koans/about_hashes.rb</td>
+</tr>
+<tr>
+<td class="" title="">AboutArrays</td>
+<td class="" title="">test_pushing_and_popping_arrays</td>
+<td class="" title="">8</td>
+<td class="" title="">./koans/about_arrays.rb</td>
+</tr>
+<tr>
+<td class="" title="">AboutArrays</td>
+<td class="" title="">test_shifting_arrays</td>
+<td class="" title="">8</td>
+<td class="" title="">./koans/about_arrays.rb</td>
+</tr>
+<tr>
+<td class="" title="">AboutDiceProject</td>
+<td class="" title="">test_rolling_the_dice_returns_a_set_of_integers_between_1_and_6</td>
+<td class="" title="">8</td>
+<td class="" title="">./koans/about_dice_project.rb</td>
+</tr>
+<tr>
+<td class="" title="">AboutHashes</td>
+<td class="" title="">test_default_value_with_block</td>
+<td class="" title="">8</td>
+<td class="" title="">./koans/about_hashes.rb</td>
+</tr>
+<tr>
+<td class="" title="">AboutIteration</td>
+<td class="" title="">test_inject_will_blow_your_mind</td>
+<td class="" title="">8</td>
+<td class="" title="">./koans/about_iteration.rb</td>
+</tr>
+<tr>
+<td class="" title="">AboutIteration</td>
+<td class="" title="">test_select_selects_certain_items_from_an_array</td>
+<td class="" title="">8</td>
+<td class="" title="">./koans/about_iteration.rb</td>
+</tr>
+<tr>
+<td class="" title="">AboutIteration</td>
+<td class="" title="">test_break_works_with_each_style_iterations</td>
+<td class="" title="">8</td>
+<td class="" title="">./koans/about_iteration.rb</td>
+</tr>
+<tr>
+<td class="" title="">Neo::Assertions</td>
+<td class="" title="">assert_raise</td>
+<td class="" title="">8</td>
+<td class="" title="">./koans/neo.rb</td>
+</tr>
+<tr>
+<td class="" title="">AboutControlStatements</td>
+<td class="" title="">test_break_statement_returns_values</td>
+<td class="" title="">8</td>
+<td class="" title="">./koans/about_control_statements.rb</td>
+</tr>
+<tr>
+<td class="" title="">AboutMessagePassing</td>
+<td class="" title="">test_sending_a_message_with_arguments</td>
+<td class="" title="">7</td>
+<td class="" title="">./koans/about_message_passing.rb</td>
+</tr>
+<tr>
+<td class="" title="">AboutScope</td>
+<td class="" title="">test_you_can_reference_nested_classes_using_the_scope_operator</td>
+<td class="" title="">7</td>
+<td class="" title="">./koans/about_scope.rb</td>
+</tr>
+<tr>
+<td class="" title="">AboutHashes</td>
+<td class="" title="">test_combining_hashes</td>
+<td class="" title="">7</td>
+<td class="" title="">./koans/about_hashes.rb</td>
+</tr>
+<tr>
+<td class="" title="">AboutDiceProject</td>
+<td class="" title="">test_you_can_roll_different_numbers_of_dice</td>
+<td class="" title="">7</td>
+<td class="" title="">./koans/about_dice_project.rb</td>
+</tr>
+<tr>
+<td class="" title="">Neo::Sensei</td>
+<td class="" title="">guide_through_error</td>
+<td class="" title="">7</td>
+<td class="" title="">./koans/neo.rb</td>
+</tr>
+<tr>
+<td class="" title="">AboutIteration</td>
+<td class="" title="">test_collect_transforms_elements_of_an_array</td>
+<td class="" title="">7</td>
+<td class="" title="">./koans/about_iteration.rb</td>
+</tr>
+<tr>
+<td class="" title="">AboutRegularExpressions</td>
+<td class="" title="">test_asterisk_means_zero_or_more</td>
+<td class="" title="">7</td>
+<td class="" title="">./koans/about_regular_expressions.rb</td>
+</tr>
+<tr>
+<td class="" title="">AboutObjects</td>
+<td class="" title="">test_small_integers_have_fixed_ids</td>
+<td class="" title="">7</td>
+<td class="" title="">./koans/about_objects.rb</td>
+</tr>
+<tr>
+<td class="" title="">AboutControlStatements</td>
+<td class="" title="">test_while_statement</td>
+<td class="" title="">7</td>
+<td class="" title="">./koans/about_control_statements.rb</td>
+</tr>
+<tr>
+<td class="" title="">AboutInheritance</td>
+<td class="" title="">test_subclasses_add_new_behavior</td>
+<td class="" title="">7</td>
+<td class="" title="">./koans/about_inheritance.rb</td>
+</tr>
+<tr>
+<td class="" title="">AboutClasses</td>
+<td class="" title="">test_all_objects_support_to_s_and_inspect</td>
+<td class="" title="">7</td>
+<td class="" title="">./koans/about_classes.rb</td>
+</tr>
+<tr>
+<td class="" title="">AboutMessagePassing</td>
+<td class="" title="">test_send_with_underscores_will_also_send_messages</td>
+<td class="" title="">7</td>
+<td class="" title="">./koans/about_message_passing.rb</td>
+</tr>
+<tr>
+<td class="" title="">AboutSandwichCode</td>
+<td class="" title="">count_lines</td>
+<td class="" title="">6</td>
+<td class="" title="">./koans/about_sandwich_code.rb</td>
+</tr>
+<tr>
+<td class="" title="">AboutTrueAndFalse</td>
+<td class="" title="">test_everything_else_is_treated_as_true</td>
+<td class="" title="">6</td>
+<td class="" title="">./koans/about_true_and_false.rb</td>
+</tr>
+<tr>
+<td class="" title="">AboutSymbols</td>
+<td class="" title="">test_symbols_can_be_compared</td>
+<td class="" title="">6</td>
+<td class="" title="">./koans/about_symbols.rb</td>
+</tr>
+<tr>
+<td class="" title="">AboutIteration</td>
+<td class="" title="">test_iterating_with_each</td>
+<td class="" title="">6</td>
+<td class="" title="">./koans/about_iteration.rb</td>
+</tr>
+<tr>
+<td class="" title="">AboutControlStatements</td>
+<td class="" title="">test_if_then_else_statements</td>
+<td class="" title="">6</td>
+<td class="" title="">./koans/about_control_statements.rb</td>
+</tr>
+<tr>
+<td class="" title="">AboutMessagePassing</td>
+<td class="" title="">test_catching_messages_makes_respond_to_lie</td>
+<td class="" title="">6</td>
+<td class="" title="">./koans/about_message_passing.rb</td>
+</tr>
+<tr>
+<td class="" title="">AboutControlStatements</td>
+<td class="" title="">test_for_statement</td>
+<td class="" title="">6</td>
+<td class="" title="">./koans/about_control_statements.rb</td>
+</tr>
+<tr>
+<td class="" title="">AboutMessagePassing</td>
+<td class="" title="">test_sending_undefined_messages_to_a_typical_object_results_in_errors</td>
+<td class="" title="">6</td>
+<td class="" title="">./koans/about_message_passing.rb</td>
+</tr>
+<tr>
+<td class="" title="">AboutSandwichCode</td>
+<td class="" title="">find_line</td>
+<td class="" title="">6</td>
+<td class="" title="">./koans/about_sandwich_code.rb</td>
+</tr>
+<tr>
+<td class="warning" title="Misindented methods">Proxy</td>
+<td class="warning" title="Misindented methods">initialize</td>
+<td class="warning" title="Misindented methods"></td>
+<td class="warning" title="Misindented methods">./koans/about_proxy_object_project.rb</td>
+</tr>
+<tr>
+<td class="warning" title="Misindented methods">Proxy</td>
+<td class="warning" title="Misindented methods">method_missing</td>
+<td class="warning" title="Misindented methods"></td>
+<td class="warning" title="Misindented methods">./koans/about_proxy_object_project.rb</td>
+</tr>
+<tr>
+<td class="warning" title="Misindented methods">Proxy</td>
+<td class="warning" title="Misindented methods">called?</td>
+<td class="warning" title="Misindented methods"></td>
+<td class="warning" title="Misindented methods">./koans/about_proxy_object_project.rb</td>
+</tr>
+<tr>
+<td class="warning" title="Misindented methods">Proxy</td>
+<td class="warning" title="Misindented methods">number_of_times_called</td>
+<td class="warning" title="Misindented methods"></td>
+<td class="warning" title="Misindented methods">./koans/about_proxy_object_project.rb</td>
+</tr>
+<tr>
+<td class="warning" title="Misindented methods">AboutProxyObjectProject</td>
+<td class="warning" title="Misindented methods">test_proxy_method_returns_wrapped_object</td>
+<td class="warning" title="Misindented methods"></td>
+<td class="warning" title="Misindented methods">./koans/about_proxy_object_project.rb</td>
+</tr>
+<tr>
+<td class="warning" title="Misindented methods">AboutProxyObjectProject</td>
+<td class="warning" title="Misindented methods">test_tv_methods_still_perform_their_function</td>
+<td class="warning" title="Misindented methods"></td>
+<td class="warning" title="Misindented methods">./koans/about_proxy_object_project.rb</td>
+</tr>
+<tr>
+<td class="warning" title="Misindented methods">AboutProxyObjectProject</td>
+<td class="warning" title="Misindented methods">test_proxy_records_messages_sent_to_tv</td>
+<td class="warning" title="Misindented methods"></td>
+<td class="warning" title="Misindented methods">./koans/about_proxy_object_project.rb</td>
+</tr>
+<tr>
+<td class="warning" title="Misindented methods">AboutProxyObjectProject</td>
+<td class="warning" title="Misindented methods">test_proxy_handles_invalid_messages</td>
+<td class="warning" title="Misindented methods"></td>
+<td class="warning" title="Misindented methods">./koans/about_proxy_object_project.rb</td>
+</tr>
+<tr>
+<td class="warning" title="Misindented methods">AboutProxyObjectProject</td>
+<td class="warning" title="Misindented methods">test_proxy_reports_methods_have_been_called</td>
+<td class="warning" title="Misindented methods"></td>
+<td class="warning" title="Misindented methods">./koans/about_proxy_object_project.rb</td>
+</tr>
+<tr>
+<td class="warning" title="Misindented methods">AboutProxyObjectProject</td>
+<td class="warning" title="Misindented methods">test_proxy_counts_method_calls</td>
+<td class="warning" title="Misindented methods"></td>
+<td class="warning" title="Misindented methods">./koans/about_proxy_object_project.rb</td>
+</tr>
+<tr>
+<td class="warning" title="Misindented methods">AboutProxyObjectProject</td>
+<td class="warning" title="Misindented methods">test_proxy_can_record_more_than_just_tv_objects</td>
+<td class="warning" title="Misindented methods"></td>
+<td class="warning" title="Misindented methods">./koans/about_proxy_object_project.rb</td>
+</tr>
+<tr>
+<td class="warning" title="Misindented methods">Television</td>
+<td class="warning" title="Misindented methods">power</td>
+<td class="warning" title="Misindented methods"></td>
+<td class="warning" title="Misindented methods">./koans/about_proxy_object_project.rb</td>
+</tr>
+<tr>
+<td class="warning" title="Misindented methods">Television</td>
+<td class="warning" title="Misindented methods">on?</td>
+<td class="warning" title="Misindented methods"></td>
+<td class="warning" title="Misindented methods">./koans/about_proxy_object_project.rb</td>
+</tr>
+<tr>
+<td class="warning" title="Misindented methods">TelevisionTest</td>
+<td class="warning" title="Misindented methods">test_it_turns_on</td>
+<td class="warning" title="Misindented methods"></td>
+<td class="warning" title="Misindented methods">./koans/about_proxy_object_project.rb</td>
+</tr>
+<tr>
+<td class="warning" title="Misindented methods">TelevisionTest</td>
+<td class="warning" title="Misindented methods">test_it_also_turns_off</td>
+<td class="warning" title="Misindented methods"></td>
+<td class="warning" title="Misindented methods">./koans/about_proxy_object_project.rb</td>
+</tr>
+<tr>
+<td class="warning" title="Misindented methods">TelevisionTest</td>
+<td class="warning" title="Misindented methods">test_edge_case_on_off</td>
+<td class="warning" title="Misindented methods"></td>
+<td class="warning" title="Misindented methods">./koans/about_proxy_object_project.rb</td>
+</tr>
+<tr>
+<td class="warning" title="Misindented methods">TelevisionTest</td>
+<td class="warning" title="Misindented methods">test_can_set_the_channel</td>
+<td class="warning" title="Misindented methods"></td>
+<td class="warning" title="Misindented methods">./koans/about_proxy_object_project.rb</td>
+</tr>
+<tr>
+<td class="warning" title="Misindented methods">AboutStrings</td>
+<td class="warning" title="Misindented methods">test_double_quoted_strings_are_strings</td>
+<td class="warning" title="Misindented methods"></td>
+<td class="warning" title="Misindented methods">./koans/about_strings.rb</td>
+</tr>
+<tr>
+<td class="warning" title="Misindented methods">AboutStrings</td>
+<td class="warning" title="Misindented methods">test_single_quoted_strings_are_also_strings</td>
+<td class="warning" title="Misindented methods"></td>
+<td class="warning" title="Misindented methods">./koans/about_strings.rb</td>
+</tr>
+<tr>
+<td class="warning" title="Misindented methods">AboutStrings</td>
+<td class="warning" title="Misindented methods">test_use_single_quotes_to_create_string_with_double_quotes</td>
+<td class="warning" title="Misindented methods"></td>
+<td class="warning" title="Misindented methods">./koans/about_strings.rb</td>
+</tr>
+<tr>
+<td class="warning" title="Misindented methods">AboutStrings</td>
+<td class="warning" title="Misindented methods">test_use_double_quotes_to_create_strings_with_single_quotes</td>
+<td class="warning" title="Misindented methods"></td>
+<td class="warning" title="Misindented methods">./koans/about_strings.rb</td>
+</tr>
+<tr>
+<td class="warning" title="Misindented methods">AboutStrings</td>
+<td class="warning" title="Misindented methods">test_use_backslash_for_those_hard_cases</td>
+<td class="warning" title="Misindented methods"></td>
+<td class="warning" title="Misindented methods">./koans/about_strings.rb</td>
+</tr>
+<tr>
+<td class="warning" title="Misindented methods">AboutStrings</td>
+<td class="warning" title="Misindented methods">test_use_flexible_quoting_to_handle_really_hard_cases</td>
+<td class="warning" title="Misindented methods"></td>
+<td class="warning" title="Misindented methods">./koans/about_strings.rb</td>
+</tr>
+<tr>
+<td class="warning" title="Misindented methods">AboutStrings</td>
+<td class="warning" title="Misindented methods">test_flexible_quotes_can_handle_multiple_lines</td>
+<td class="warning" title="Misindented methods"></td>
+<td class="warning" title="Misindented methods">./koans/about_strings.rb</td>
+</tr>
+<tr>
+<td class="warning" title="Misindented methods">AboutStrings</td>
+<td class="warning" title="Misindented methods">test_here_documents_can_also_handle_multiple_lines</td>
+<td class="warning" title="Misindented methods"></td>
+<td class="warning" title="Misindented methods">./koans/about_strings.rb</td>
+</tr>
+<tr>
+<td class="warning" title="Misindented methods">AboutStrings</td>
+<td class="warning" title="Misindented methods">test_plus_will_concatenate_two_strings</td>
+<td class="warning" title="Misindented methods"></td>
+<td class="warning" title="Misindented methods">./koans/about_strings.rb</td>
+</tr>
+<tr>
+<td class="warning" title="Misindented methods">AboutStrings</td>
+<td class="warning" title="Misindented methods">test_plus_concatenation_will_leave_the_original_strings_unmodified</td>
+<td class="warning" title="Misindented methods"></td>
+<td class="warning" title="Misindented methods">./koans/about_strings.rb</td>
+</tr>
+<tr>
+<td class="warning" title="Misindented methods">AboutStrings</td>
+<td class="warning" title="Misindented methods">test_plus_equals_will_concatenate_to_the_end_of_a_string</td>
+<td class="warning" title="Misindented methods"></td>
+<td class="warning" title="Misindented methods">./koans/about_strings.rb</td>
+</tr>
+<tr>
+<td class="warning" title="Misindented methods">AboutStrings</td>
+<td class="warning" title="Misindented methods">test_plus_equals_also_will_leave_the_original_string_unmodified</td>
+<td class="warning" title="Misindented methods"></td>
+<td class="warning" title="Misindented methods">./koans/about_strings.rb</td>
+</tr>
+<tr>
+<td class="warning" title="Misindented methods">AboutStrings</td>
+<td class="warning" title="Misindented methods">test_the_shovel_operator_will_also_append_content_to_a_string</td>
+<td class="warning" title="Misindented methods"></td>
+<td class="warning" title="Misindented methods">./koans/about_strings.rb</td>
+</tr>
+<tr>
+<td class="warning" title="Misindented methods">AboutStrings</td>
+<td class="warning" title="Misindented methods">test_the_shovel_operator_modifies_the_original_string</td>
+<td class="warning" title="Misindented methods"></td>
+<td class="warning" title="Misindented methods">./koans/about_strings.rb</td>
+</tr>
+<tr>
+<td class="warning" title="Misindented methods">AboutStrings</td>
+<td class="warning" title="Misindented methods">test_double_quoted_string_interpret_escape_characters</td>
+<td class="warning" title="Misindented methods"></td>
+<td class="warning" title="Misindented methods">./koans/about_strings.rb</td>
+</tr>
+<tr>
+<td class="warning" title="Misindented methods">AboutStrings</td>
+<td class="warning" title="Misindented methods">test_single_quoted_string_do_not_interpret_escape_characters</td>
+<td class="warning" title="Misindented methods"></td>
+<td class="warning" title="Misindented methods">./koans/about_strings.rb</td>
+</tr>
+<tr>
+<td class="warning" title="Misindented methods">AboutStrings</td>
+<td class="warning" title="Misindented methods">test_single_quotes_sometimes_interpret_escape_characters</td>
+<td class="warning" title="Misindented methods"></td>
+<td class="warning" title="Misindented methods">./koans/about_strings.rb</td>
+</tr>
+<tr>
+<td class="warning" title="Misindented methods">AboutStrings</td>
+<td class="warning" title="Misindented methods">test_double_quoted_strings_interpolate_variables</td>
+<td class="warning" title="Misindented methods"></td>
+<td class="warning" title="Misindented methods">./koans/about_strings.rb</td>
+</tr>
+<tr>
+<td class="warning" title="Misindented methods">AboutStrings</td>
+<td class="warning" title="Misindented methods">test_single_quoted_strings_do_not_interpolate</td>
+<td class="warning" title="Misindented methods"></td>
+<td class="warning" title="Misindented methods">./koans/about_strings.rb</td>
+</tr>
+<tr>
+<td class="warning" title="Misindented methods">AboutStrings</td>
+<td class="warning" title="Misindented methods">test_any_ruby_expression_may_be_interpolated</td>
+<td class="warning" title="Misindented methods"></td>
+<td class="warning" title="Misindented methods">./koans/about_strings.rb</td>
+</tr>
+<tr>
+<td class="warning" title="Misindented methods">AboutStrings</td>
+<td class="warning" title="Misindented methods">test_you_can_get_a_substring_from_a_string</td>
+<td class="warning" title="Misindented methods"></td>
+<td class="warning" title="Misindented methods">./koans/about_strings.rb</td>
+</tr>
+<tr>
+<td class="warning" title="Misindented methods">AboutStrings</td>
+<td class="warning" title="Misindented methods">test_you_can_get_a_single_character_from_a_string</td>
+<td class="warning" title="Misindented methods"></td>
+<td class="warning" title="Misindented methods">./koans/about_strings.rb</td>
+</tr>
+<tr>
+<td class="warning" title="Misindented methods">AboutStrings</td>
+<td class="warning" title="Misindented methods">test_in_older_ruby_single_characters_are_represented_by_integers</td>
+<td class="warning" title="Misindented methods"></td>
+<td class="warning" title="Misindented methods">./koans/about_strings.rb</td>
+</tr>
+<tr>
+<td class="warning" title="Misindented methods">AboutStrings</td>
+<td class="warning" title="Misindented methods">test_in_modern_ruby_single_characters_are_represented_by_strings</td>
+<td class="warning" title="Misindented methods"></td>
+<td class="warning" title="Misindented methods">./koans/about_strings.rb</td>
+</tr>
+<tr>
+<td class="warning" title="Misindented methods">AboutStrings</td>
+<td class="warning" title="Misindented methods">test_strings_can_be_split</td>
+<td class="warning" title="Misindented methods"></td>
+<td class="warning" title="Misindented methods">./koans/about_strings.rb</td>
+</tr>
+<tr>
+<td class="warning" title="Misindented methods">AboutStrings</td>
+<td class="warning" title="Misindented methods">test_strings_can_be_split_with_different_patterns</td>
+<td class="warning" title="Misindented methods"></td>
+<td class="warning" title="Misindented methods">./koans/about_strings.rb</td>
+</tr>
+<tr>
+<td class="warning" title="Misindented methods">AboutStrings</td>
+<td class="warning" title="Misindented methods">test_strings_can_be_joined</td>
+<td class="warning" title="Misindented methods"></td>
+<td class="warning" title="Misindented methods">./koans/about_strings.rb</td>
+</tr>
+<tr>
+<td class="warning" title="Misindented methods">AboutStrings</td>
+<td class="warning" title="Misindented methods">test_strings_are_unique_objects</td>
+<td class="warning" title="Misindented methods"></td>
+<td class="warning" title="Misindented methods">./koans/about_strings.rb</td>
+</tr>
+
+  </tbody>
+</table>
+<div class="hint">NOTE: Red methods are misindented. Continue your way to perfect code by fixing them.</div><h2>Method calls with 4+ arguments</h2>
+<table class="details-stats">
+  <thead>
+    <tr>
+<th class="" title=""># of arguments</th>
+<th class="" title="">Path</th>
+</tr>
+
+  </thead>
+  <tbody>
+    <tr>
+<td class="" title="">5</td>
+<td class="" title="">./koans/about_message_passing.rb</td>
+</tr>
+<tr>
+<td class="" title="">6</td>
+<td class="" title="">./koans/about_message_passing.rb</td>
+</tr>
+
+  </tbody>
+</table>
+
+    </section>
+    <section class="charts-percentage js-charts-percentage js-tab-item">
+    </section>
+    <section class="progress js-progress js-tab-item">
+      <div class="plot-charts-item">
+        <div class="plot-charts-item-caption">Overall progress</div>
+        <div class="plot-charts-item-graph plot"></div>
+        <div class="clearfix"></div>
+      </div>
+    </section>
+    <footer class="main-footer">
+      Scanned with love by <a href="https://github.com/makaroni4/sandi_meter">sandi_meter</a> gem.
+      Please, <a href="https://github.com/makaroni4/sandi_meter/issues/new">leave an issue</a> or
+      <a href="mailto:makaroni4@gmail.com">email</a> some feedback!
+    </footer>
+  </div>
+</body>
+</html>

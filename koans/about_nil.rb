@@ -1,4 +1,3 @@
-# frozen_string_literal: true
 
 require File.expand_path("#{File.dirname(__FILE__)}/neo")
 
@@ -24,8 +23,8 @@ class AboutNil < Neo::Koan
 
   def test_nil_has_a_few_methods_defined_on_it
     assert_equal true, nil.nil?
-    assert_equal "", nil.to_s
-    assert_equal "nil", nil.inspect
+    assert_equal '', nil.to_s
+    assert_equal 'nil', nil.inspect
 
     # THINK ABOUT IT:
     #

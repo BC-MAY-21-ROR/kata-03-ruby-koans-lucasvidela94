@@ -1,4 +1,4 @@
-# frozen_string_literal: true
+
 
 require File.expand_path("#{File.dirname(__FILE__)}/neo")
 
@@ -66,7 +66,7 @@ class AboutSymbols < Neo::Koan
     symbol = :cats
     string = "It is raining #{symbol} and dogs."
 
-    assert_equal "It is raining cats and dogs.", string
+    assert_equal 'It is raining cats and dogs.', string
   end
 
   def test_symbols_are_not_strings
@@ -93,7 +93,7 @@ class AboutSymbols < Neo::Koan
   end
 
   def test_symbols_can_be_dynamically_created
-    assert_equal :catdogs, ("cat" + "dogs" ).to_sym
+    assert_equal :catdogs, 'catdogs'.to_sym
   end
 
   # THINK ABOUT IT:

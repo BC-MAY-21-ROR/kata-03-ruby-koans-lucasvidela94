@@ -1,4 +1,4 @@
-# frozen_string_literal: true
+
 
 require File.expand_path("#{File.dirname(__FILE__)}/neo")
 
@@ -17,14 +17,14 @@ class AboutHashes < Neo::Koan
 
   def test_accessing_hashes
     hash = { one: 'uno', two: 'dos' }
-    assert_equal "uno", hash[:one]
-    assert_equal "dos", hash[:two]
+    assert_equal 'uno', hash[:one]
+    assert_equal 'dos', hash[:two]
     assert_equal nil, hash[:doesnt_exist]
   end
 
   def test_accessing_hashes_with_fetch
     hash = { one: 'uno' }
-    assert_equal "uno", hash.fetch(:one)
+    assert_equal 'uno', hash.fetch(:one)
     assert_raise(KeyError) do
       hash.fetch(:doesnt_exist)
     end
@@ -38,7 +38,7 @@ class AboutHashes < Neo::Koan
     hash = { one: 'uno', two: 'dos' }
     hash[:one] = 'eins'
 
-    expected = { one: 'eins', two: 'dos'}
+    expected = { one: 'eins', two: 'dos' }
     assert_equal expected, hash
 
     # Bonus Question: Why was "expected" broken out into a variable
@@ -89,7 +89,7 @@ class AboutHashes < Neo::Koan
     hash2[:one] = 1
 
     assert_equal 1, hash2[:one]
-    assert_equal "dos", hash2[:two]
+    assert_equal 'dos', hash2[:two]
   end
 
   def test_default_value_is_the_same_object
@@ -98,9 +98,9 @@ class AboutHashes < Neo::Koan
     hash[:one] << 'uno'
     hash[:two] << 'dos'
 
-    assert_equal ["uno","dos"], hash[:one]
-    assert_equal ["uno", "dos"], hash[:two]
-    assert_equal ["uno","dos"], hash[:three]
+    assert_equal %w[uno dos], hash[:one]
+    assert_equal %w[uno dos], hash[:two]
+    assert_equal %w[uno dos], hash[:three]
 
     assert_equal true, hash[:one].equal?(hash[:two])
   end
@@ -111,8 +111,8 @@ class AboutHashes < Neo::Koan
     hash[:one] << 'uno'
     hash[:two] << 'dos'
 
-    assert_equal ["uno"], hash[:one]
-    assert_equal ["dos"], hash[:two]
+    assert_equal ['uno'], hash[:one]
+    assert_equal ['dos'], hash[:two]
     assert_equal [], hash[:three]
   end
 end

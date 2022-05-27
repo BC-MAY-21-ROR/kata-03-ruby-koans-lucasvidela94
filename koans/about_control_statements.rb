@@ -1,4 +1,3 @@
-# frozen_string_literal: true
 
 require File.expand_path("#{File.dirname(__FILE__)}/neo")
 
@@ -80,7 +79,7 @@ class AboutControlStatements < Neo::Koan
       result *= i
       i += 1
     end
-    assert_equal 3628800, result
+    assert_equal 3_628_800, result
   end
 
   def test_break_statement
@@ -92,7 +91,7 @@ class AboutControlStatements < Neo::Koan
       result *= i
       i += 1
     end
-    assert_equal 3628800, result
+    assert_equal 3_628_800, result
   end
 
   def test_break_statement_returns_values
@@ -115,7 +114,7 @@ class AboutControlStatements < Neo::Koan
 
       result << i
     end
-    assert_equal [1,3,5,7,9], result
+    assert_equal [1, 3, 5, 7, 9], result
   end
 
   def test_for_statement
@@ -124,7 +123,7 @@ class AboutControlStatements < Neo::Koan
     array.each do |item|
       result << item.upcase
     end
-    assert_equal ["FISH","AND", "CHIPS"], result
+    assert_equal %w[FISH AND CHIPS], result
   end
 
   def test_times_statement

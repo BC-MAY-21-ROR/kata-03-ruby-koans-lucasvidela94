@@ -1,4 +1,4 @@
-# frozen_string_literal: true
+
 
 require File.expand_path("#{File.dirname(__FILE__)}/neo")
 
@@ -32,7 +32,23 @@ require File.expand_path("#{File.dirname(__FILE__)}/neo")
 # Your goal is to write the score method.
 
 def score(dice)
-  # You need to write this method
+  return 0 if dice.empty?
+
+  diceResult = Hash.new(0)
+  dice.each do |d|
+    diceResult[d] += 1
+  end
+  score = 0
+  diceResult.each do |k, v|
+    if k == 1
+      score = score + v / 3 * 1000 + v % 3 * 100
+    elsif k == 5
+      score = score + v / 3 * 100 * 5 + v % 3 * 50
+    elsif v >= 3
+      score += (k * 100)
+    end
+  end
+  score
 end
 
 class AboutScoringProject < Neo::Koan
